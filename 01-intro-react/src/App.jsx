@@ -1,6 +1,5 @@
 import './App.css'
 import ilustracion from './assets/img/ilustracion.svg'
-import ilustracion1 from './assets/img/ilustracion1.svg'
 import uno from './assets/img/uno.jpg'
 import dos from './assets/img/dos.jpg'
 import tres from './assets/img/tres.jpg'
@@ -8,6 +7,7 @@ import cuatro from './assets/img/cuatro.jpg'
 import cinco from './assets/img/cinco.jpg'
 import seis from './assets/img/seis.jpg'
 import Hero from './components/Hero'
+import Website from './components/Website'
 
 function App () {
   return (
@@ -19,16 +19,12 @@ function App () {
         buttonLink='#contacto'
       />
 
-      <section className='wave-contenedor website'>
-        <img src={ilustracion1} alt='' />
-        <div className='contenedor-textos-main'>
-          <h2 className='titulo left'>Title of section</h2>
-          <p className='parrafo'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt enim reiciendis
-            molestias nam tempore. Ullam hic accusantium eligendi ipsam corrupti!
-          </p>
-          <a href='' className='cta'>Learn more</a>
-        </div>
-      </section>
+      <Website
+        title='Un titulo muy impactante'
+        description='Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah'
+        buttonText='Picale al botón'
+        buttonLink='#'
+      />
 
       <section className='info'>
         <div className='contenedor'>
