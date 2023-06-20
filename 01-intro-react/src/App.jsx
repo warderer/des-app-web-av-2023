@@ -12,7 +12,13 @@ import Hero from './components/Hero'
 function App () {
   return (
     <>
-      <Hero />
+      <Hero
+        title='Bienvenidos Delfines'
+        subtitle='Estamos aprendiendo props de React'
+        buttonText='Conoce más'
+        buttonLink='#contacto'
+      />
+
       <section className='wave-contenedor website'>
         <img src={ilustracion1} alt='' />
         <div className='contenedor-textos-main'>
