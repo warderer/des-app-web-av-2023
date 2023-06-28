@@ -1,9 +1,22 @@
+import { FaWhatsapp } from 'react-icons/fa'
+
 const ProductCard = ({ id, title, description, url, price, quantity }) => {
   const grayscale = quantity === 0 ? { filter: 'grayscale(100%) brightness(60%)' } : {}
 
   const availabilityText = quantity === 0 ? 'Agotado' : 'Disponible'
 
   const availabilityClass = quantity === 0 ? 'availability-tag out-of-stock' : 'availability-tag'
+
+  const handleWhatsAppClick = () => {
+    const message = `Hola, me interesa comprar el producto ${title}. ¿Todavía esta disponible?`
+    const phoneNumber = '1234567890'
+
+    const encodedMessage = encodeURI(message)
+
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`
+
+    window.open(whatsappURL)
+  }
 
   return (
     <div className='col-md-3 my-3 d-flex align-items-stretch'>
@@ -22,6 +35,10 @@ const ProductCard = ({ id, title, description, url, price, quantity }) => {
 
           <div className='mx-auto mt-3'>
             <p className='card-price'>${price}</p>
+            <button className='whatsapp-button' onClick={handleWhatsAppClick}>
+              <FaWhatsapp />
+              Comprar
+            </button>
           </div>
         </div>
       </div>
