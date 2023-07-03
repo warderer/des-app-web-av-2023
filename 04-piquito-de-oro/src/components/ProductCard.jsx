@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
 
 const ProductCard = ({ id, title, description, url, price, quantity }) => {
@@ -21,12 +22,12 @@ const ProductCard = ({ id, title, description, url, price, quantity }) => {
   return (
     <div className='col-md-3 my-3 d-flex align-items-stretch'>
       <div className='card'>
-        <a href={`/product/${id}`}>
+        <Link to={`/product/${id}`}>
           <div className='image-container'>
             <img className='product-image' src={`/assets/img/${url}`} alt={title} style={grayscale} />
             <div className={availabilityClass}>{availabilityText}</div>
           </div>
-        </a>
+        </Link>
         <div className='card-body d-flex flex-column justify-content-between'>
           <div>
             <h5 className='card-title'>{title}</h5>
