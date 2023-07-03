@@ -16,7 +16,7 @@ const Product = () => {
       }).catch((error) => {
         console.error(error)
       })
-  }, [])
+  }, [productId])
 
   if (!product) {
     return <div>Error: Producto no encontrado</div>
